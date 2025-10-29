@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm add -D eslint-plugin-import eslint-plugin-unused-imports eslint-plugin-jsx-a11y eslint-plugin-tailwindcss @typescript-eslint/eslint-plugin @typescript-eslint/parser)",
+      "Bash(pnpm add -D @eslint/eslintrc eslint-import-resolver-typescript)",
+      "Bash(pnpm add -D jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom @types/jest)",
+      "Bash(pnpm add -D tailwindcss postcss autoprefixer)",
+      "Bash(pnpm typecheck)",
+      "Bash(pnpm add -D @testing-library/user-event)",
+      "Bash(pnpm lint)",
+      "Bash(npx eslint . --ext .ts,.tsx)",
+      "Bash(npx next lint .)",
+      "Bash(npx next lint --help)",
+      "Bash(npx next --version)",
+      "Bash(pnpm add -D typescript-eslint @next/eslint-plugin-next eslint-plugin-react)",
+      "Bash(pnpm add -D @eslint/js)",
+      "Bash(pnpm add -D eslint-plugin-react-hooks)",
+      "Bash(pnpm test)",
+      "Bash(pnpm build)",
+      "Bash(pnpm add class-variance-authority clsx tailwind-merge next-themes lucide-react)",
+      "Bash(pnpm add @radix-ui/react-slot @radix-ui/react-switch)",
+      "Bash(pnpm update tailwindcss@latest)",
+      "Bash(pnpm add -D @tailwindcss/postcss)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
