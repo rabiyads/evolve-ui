@@ -13,9 +13,9 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
     <div className="container py-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Sidebar */}
-        <aside className="md:col-span-1 space-y-4">
+        <aside className="md:col-span-1 space-y-4 pl-6 border-l">
           <div>
-            <h2 className="text-lg font-semibold mb-3">Blog</h2>
+            <h2 className="text-2xl font-semibold mb-3">Read our Blogs</h2>
             <nav className="space-y-2">
               <Link
                 href="/blog"
