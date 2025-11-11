@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-import "./globals.css";
+import "./new-globals.css";
 
 export const metadata = {
   title: "Evolve-UI",
