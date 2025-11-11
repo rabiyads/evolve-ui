@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Trying JavaScript?</h1>
+
+<p id="message">Click the button to change this text and color!</p>
+
+<button type="button" onclick="changeText()">Click Me</button>
+
+<script>
+function changeText() {
+  const text = document.getElementById("message");
+  text.innerHTML = "Hello! You just changed this text with JavaScript 😄";
+  text.style.color = "red";
+}
+</script>
+
+</body>
+</html>
