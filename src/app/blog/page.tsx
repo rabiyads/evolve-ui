@@ -1,85 +1,56 @@
-import Link from "next/link";
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-export const metadata = {
-  title: "Blog - Evolve-UI",
-  description: "Learn about Next.js, TypeScript, and modern web development",
-};
-
-const blogPosts = [
-  {
-    slug: "getting-started",
-    title: "Getting Started with Evolve-UI",
-    description:
-      "Learn how to set up your development environment and start building with this template.",
-    date: "2024-01-15",
-    category: "Tutorial",
-  },
-  {
-    slug: "nextjs-routing",
-    title: "Understanding Next.js App Router",
-    description:
-      "A deep dive into the Next.js App Router, nested layouts, and routing patterns.",
-    date: "2024-01-20",
-    category: "Guide",
-  },
-  {
-    slug: "shadcn-ui",
-    title: "Building UIs with shadcn/ui",
-    description:
-      "How to use shadcn/ui components to build beautiful, accessible user interfaces.",
-    date: "2024-01-25",
-    category: "Tutorial",
-  },
-];
-
-export default function BlogPage() {
+export default function CircleCardCarousel() {
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-4xl font-bold mb-2">Blog</h1>
-        <p className="text-muted-foreground">
-          Tutorials and guides for learning modern web development
-        </p>
-      </div>
+    <section className="w-full py-12">
+      <div className="container mx-auto px-4 md:px-6">
 
-      <div className="space-y-4">
-        {blogPosts.map((post) => (
-          <Card key={post.slug}>
-            <CardHeader>
-              <div className="flex items-start justify-between">
-                <div className="space-y-1">
-                  <CardTitle>{post.title}</CardTitle>
-                  <CardDescription>{post.description}</CardDescription>
-                </div>
-                <Badge variant="secondary">{post.category}</Badge>
-              </div>
-            </CardHeader>
-            <CardFooter className="flex justify-between items-center">
-              <span className="text-sm text-muted-foreground">
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </span>
-              <Button variant="outline" asChild>
-                <Link href={`/blog/${post.slug}`}>Read More</Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
+        {/* Header */}
+        <h2 className="text-3xl font-semibold mb-6">Our Features</h2>
+
+        {/* Carousel */}
+        <div className="flex space-x-6 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth mt-4">
+
+          {/* Circle Card 1 */}
+          <div className="min-w-[200px] h-[200px] 
+            bg-gradient-to-br from-[#0a2342] to-[#1e3a8a] 
+            text-white rounded-full flex flex-col items-center justify-center 
+            text-center shadow-lg flex-shrink-0 snap-center
+            hover:scale-105 transition-transform duration-300">
+            <h3 className="text-lg font-semibold mb-1">Feature 1</h3>
+            <p className="text-sm px-4 text-gray-200">Short description</p>
+          </div>
+
+          {/* Circle Card 2 */}
+          <div className="min-w-[200px] h-[200px] 
+            bg-gradient-to-br from-[#0a2342] to-[#1e3a8a] 
+            text-white rounded-full flex flex-col items-center justify-center 
+            text-center shadow-lg flex-shrink-0 snap-center
+            hover:scale-105 transition-transform duration-300">
+            <h3 className="text-lg font-semibold mb-1">Feature 2</h3>
+            <p className="text-sm px-4 text-gray-200">Short description</p>
+          </div>
+
+          {/* Circle Card 3 */}
+          <div className="min-w-[200px] h-[200px] 
+            bg-gradient-to-br from-[#0a2342] to-[#1e3a8a] 
+            text-white rounded-full flex flex-col items-center justify-center 
+            text-center shadow-lg flex-shrink-0 snap-center
+            hover:scale-105 transition-transform duration-300">
+            <h3 className="text-lg font-semibold mb-1">Feature 3</h3>
+            <p className="text-sm px-4 text-gray-200">Short description</p>
+          </div>
+
+          {/* Circle Card 4 */}
+          <div className="min-w-[200px] h-[200px] 
+            bg-gradient-to-br from-[#0a2342] to-[#1e3a8a] 
+            text-white rounded-full flex flex-col items-center justify-center 
+            text-center shadow-lg flex-shrink-0 snap-center
+            hover:scale-105 transition-transform duration-300">
+            <h3 className="text-lg font-semibold mb-1">Feature 4</h3>
+            <p className="text-sm px-4 text-gray-200">Short description</p>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
